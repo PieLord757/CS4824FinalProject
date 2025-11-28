@@ -1,0 +1,25 @@
+# Large model files
+*.pth
+
+# RF-DETR cloned repo (will be cloned in Colab)
+rf-detr/
+
+# Output directories
+output/
+
+# Python environment
+.venv/
+__pycache__/
+*.pyc
+
+# Raw frames and labeled data (already in coco-dataset.zip)
+frames/
+frames-shaded/
+labeled-data/
+coco-dataset/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store

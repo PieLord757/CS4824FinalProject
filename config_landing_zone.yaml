@@ -1,0 +1,41 @@
+data:
+  train_ann_file: coco-dataset/annotations/instances_train.json
+  train_img_dir: coco-dataset/train
+  val_ann_file: coco-dataset/annotations/instances_val.json
+  val_img_dir: coco-dataset/val
+  test_ann_file: coco-dataset/annotations/instances_test.json
+  test_img_dir: coco-dataset/test
+  num_classes: 1
+  class_names:
+  - Landing Zone
+model:
+  type: RT-DETR
+  backbone: resnet50
+  num_queries: 100
+  num_classes: 1
+training:
+  batch_size: 4
+  num_epochs: 100
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  lr_scheduler: MultiStepLR
+  lr_drop_epochs:
+  - 60
+  - 80
+  clip_max_norm: 0.1
+  augmentation:
+    random_flip: true
+    random_crop: false
+    color_jitter: true
+    normalize: true
+evaluation:
+  eval_interval: 5
+  save_best_only: true
+  metric: mAP
+output:
+  output_dir: output/landing_zone_detection
+  checkpoint_dir: output/landing_zone_detection/checkpoints
+  log_dir: output/landing_zone_detection/logs
+device: cuda
+num_workers: 4
+seed: 42
