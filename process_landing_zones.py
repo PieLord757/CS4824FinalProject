@@ -153,6 +153,11 @@ class LandingZoneDetector:
             shaded_img = cv2.imread(str(shaded_path))
             original_img = cv2.imread(str(original_path))
             
+            # Skip if images couldn't be loaded (corrupted files)
+            if shaded_img is None or original_img is None:
+                print(f"Warning: Could not load {frame_name}, skipping (corrupted file)...")
+                continue
+            
             # Detect landing zones
             bboxes = self.detect_landing_zones(shaded_img)
             
@@ -198,7 +203,7 @@ def main():
         frames_dir='frames',
         shaded_dir='frames-shaded',
         output_dir='labeled-data',
-        brightness_threshold=200,
+        brightness_threshold=150,  # Lowered from 200 to detect landing zones in new data
         min_area=100
     )
     
