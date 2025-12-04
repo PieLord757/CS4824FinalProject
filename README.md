@@ -324,12 +324,7 @@ Tools Used in the Workflow (outside the repo)
 
 ## 👥 Contributors
 
-Update with your own names / roles.
-
-	•	Student Team – CS 4824
- 
-
-Feel free to add GitHub profile links here.
+	•	Student Team – CS 4824 – Mikhail, Nathan, Shiva, Stephen, Syon
 
 ⸻
 
