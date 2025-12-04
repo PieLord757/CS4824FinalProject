@@ -3,7 +3,7 @@
 <!-- HEADER STYLE: CLASSIC -->
 <div align="center">
 
-<img src="assets/drone_landing_logo.png" width="30%" style="position: relative; top: 0; right: 0;" alt="Project Logo"/>
+<img src="drone_landing_logo.png" width="30%" style="position: relative; top: 0; right: 0;" alt="Project Logo"/>
 
 # DRONE LANDING ZONE DETECTION – CS 4824 Final Project
 
