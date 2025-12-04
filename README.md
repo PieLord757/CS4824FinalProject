@@ -184,6 +184,46 @@ CS4824FinalProject/
 └── verify_and_setup.py           # Environment + dataset verification helper
 ```
 
+---
+
+## 🚀 Getting Started
+
+This project provides a complete pipeline for training and evaluating a YOLO-based computer-vision model for detecting drone landing zones. Follow the steps below to set up your environment, prepare data, train models, and run inference.
+
+---
+
+## 📋 Prerequisites
+
+Make sure you have the following installed:
+
+- Python 3.9+
+- PyTorch (with CUDA recommended)
+- Ultralytics YOLO (`pip install ultralytics`)
+- Git
+- (Optional) NVIDIA GPU for faster training
+
+Install the correct version of PyTorch for your system:  
+https://pytorch.org/get-started/locally/
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```sh
+git clone https://github.com/PieLord757/CS4824FinalProject
+cd CS4824FinalProject
+```
+
+---
+
+## 🏋️ Training
+Training outputs (weights, metrics, predictions) will be saved automatically in:
+runs/detect/train/
+
+---
+
 ## Quick file descriptions
 	•	config_landing_zone.yaml
 Central config for the landing zone detector: dataset paths, model config, hyperparameters.
